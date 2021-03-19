@@ -1,80 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>unions are dumb</title>
     <style>
-        *{
-            margin:0;
+        * {
+            margin: 0;
             padding: 0;
-            font-family:Arial, Helvetica, sans-serif
+            font-family: Arial, Helvetica, sans-serif
         }
-        body{
+
+        body {
             background-color: black;
         }
-        .welcome{
+
+        .welcome {
             height: 20px;
-            background-color:indianred;
+            background-color: indianred;
             padding: 20px;
         }
-        .container{
+
+        .container {
             width: 50%;
             margin: 0 auto;
-            height: 100vh;
+            height: 100%;
             background-color: gray;
             text-align: center;
         }
-        .container h1{
+
+        .container h1 {
             display: inline-block;
         }
-        .header{
+
+        .header {
             width: 100%;
             height: 100px;
-            background-color:darkslategray;
+            background-color: darkslategray;
         }
-        .content{
+
+        .content {
             padding-top: 15px;
             border: black solid thin;
 
-            margin:10px 30px;
+            margin: 10px 30px;
 
-            margin-bottom:50px;
+            margin-bottom: 50px;
             background-color: gray;
         }
-
+        .rudumb{
+            margin: 30px;
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class='welcome'>Welcome to unions r dumb</div>
         <div class='header'>
-    This website was inspired by <h1>smalls from youtube</h1> in proving how unions are dumb. 
-    <br/>
-    This website is a work in progress, the content you see has been created in about 15 minutes.
+            This website was inspired by <h1>smalls from youtube</h1> in proving how unions are dumb.
+            <br />
+            This website is a work in progress, the content you see has been created in about 15 minutes.
         </div>
         <div class="content">
-            <p>"so your idea is to find a solution that both helps the working class but doesn't mean the pmc is taking home less money? Yeah, you're not gonna find it." -smalls</p>
+            <p>"so your idea is to find a solution that both helps the working class but doesn't mean the pmc is taking
+                home less money? Yeah, you're not gonna find it." -smalls</p>
             <p>this is the type of dumb thinking this website will help get around</p>
-            <br/>
-            <img src="https://laborunionreport.com/wp-content/uploads/2014/01/THE-UNION-TRACK-RECORD.jpg"/>
+            <br />
+            <img src="https://laborunionreport.com/wp-content/uploads/2014/01/THE-UNION-TRACK-RECORD.jpg" />
+        
+        <div class="rudumb">
+            <h1> take this survay to see if you are dumb</h1>
+            <br />
+            <div id="radios">
+            <input type="radio" id="no" name="t" value="no">
+            <label for="huey">Are you smalls from youtube</label>
+            <br />
+            <input type="radio" id="yes" name="t" value="yes">
+            <label for="yes">Are you not smalls from youtube</label>
+            </div>
         </div>
+    </div>
         <div class="footer">more content and better design comming soon</div>
     </div>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7RPEJ8X9C6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7RPEJ8X9C6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-7RPEJ8X9C6');
-  alert("smalls u a bitch hahahaha")
-</script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-7RPEJ8X9C6');
+        
+        setTimeout(function(){
+            alert("smalls u a bitch hahahaha")
+
+        }, 4000)
+
+
+        $(function () {
+            $("input[name='t']").click(function () {
+                if ($('input:radio[name=t]:checked').val() == "yes") {
+                   $("#radios").html("NO- you are not dumb, you are smart and beautiful")
+                }else{
+                    $("#radios").html("YES- you are literally the dumbest person alive")
+                }
+            });
+
+        });
+    </script>
 </body>
+
 </html>
